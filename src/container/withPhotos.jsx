@@ -1,6 +1,6 @@
-import React from 'react'
-import { Photo } from '../Photo'
-import { useQuery, gql } from '@apollo/client'
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+import { ListOfPhotosComponent } from "../components/ListOfPhotosComponent";
 
 const GET_PHOTOS = gql`
   query getPhotos {
@@ -14,24 +14,11 @@ const GET_PHOTOS = gql`
   }
 `;
 
-
-
 export const ListOfPhotos = () => {
   const { loading, error, data = {} } = useQuery(GET_PHOTOS);
-
+  
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  return (
-    <div>
-        {
-            data.photos.map(element => (
-              <>
-                <Photo />
-                {element.id}
-              </>
-            ))
-        }
-    </div>
-  )
-}
+  return <ListOfPhotosComponent data={data.photos} />;
+};
