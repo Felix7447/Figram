@@ -6,7 +6,11 @@ export const User = ({userId, size}) => {
   return (
     <Container>
         <MdAccountCircle size={size} />
-        <Span>User-{userId}</Span>
+        {
+          userId ? 
+          <Span>User-{userId}</Span>
+          : <Span>User</Span>
+        }
     </Container>
   )
 }

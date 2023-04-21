@@ -5,7 +5,7 @@ const DEFAULT_IMAGE = 'https://res.cloudinary.com/midudev/image/upload/w_150/v15
 
 export const Story = ({ name = 'Loading...', cover = DEFAULT_IMAGE, path = '/' }) => {
   return (
-      <Anchor href={path}>
+      <Anchor to={path}>
         <img src={cover} alt={name} />
         <p>{name}</p>
       </Anchor>

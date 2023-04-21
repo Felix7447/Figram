@@ -1,11 +1,16 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Anchor = styled.a`
+export const Anchor = styled(Link)`
   max-width: 105px;
   display: inline-block;
   color: inherit;
   text-align: center;
   margin: 0 0.5em;
+
+  :hover {
+    color: inherit;
+  }
 
   img {
     border-radius: 50%;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavigationBar = styled.nav`
   width: 100%;
@@ -12,7 +13,7 @@ export const NavigationBar = styled.nav`
   border-top: 1px black solid;
 `;
 
-export const Anchor = styled.a`
+export const Anchor = styled(Link)`
   color: inherit;
   width: 100%;
 

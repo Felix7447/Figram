@@ -5,17 +5,17 @@ import { MdHome, MdOutlineFavorite, MdPerson2 } from "react-icons/md"
 export const NavBar = ({ size = '24px'}) => {
   return (
     <NavigationBar>
-      <Anchor href='/'>
+      <Anchor to='/'>
         <Button>
             <MdHome size={size}/>
         </Button>
       </Anchor>
-      <Anchor href='/favs'>
+      <Anchor to='/favs'>
         <Button>
             <MdOutlineFavorite size={size}/>
         </Button>
       </Anchor>
-      <Anchor href='/user'>
+      <Anchor to='/account'>
         <Button>
             <MdPerson2 size={size}/> 
         </Button>

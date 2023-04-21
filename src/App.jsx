@@ -1,17 +1,12 @@
 import React from 'react'
-
 import './styles/App.css'
-
-import { Home } from './pages/Home'
-import { Logo } from './components/Logo'
-import { NavBar } from './components/NavBar'
+import { RouterProvider } from "react-router-dom";
+import { router } from './routes/router';
 
 function App() {
   return (
     <div className="App">
-      <Logo />
-      <Home />
-      <NavBar />
+      <RouterProvider router={router} />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 const fadeIn = keyframes`
   from {
@@ -17,7 +18,7 @@ export const Post = styled.div`
   min-height: 360px;
 `;
 
-export const Anchor = styled.a`
+export const Anchor = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;

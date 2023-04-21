@@ -3,8 +3,8 @@ import { useQuery, gql } from "@apollo/client";
 import { ListOfPhotosComponent } from "../components/ListOfPhotosComponent";
 
 const GET_PHOTOS = gql`
-  query getPhotos {
-    photos {
+  query getPhotos($categoryId: ID) {
+    photos(categoryId: $categoryId) {
       id
       categoryId
       src
@@ -14,8 +14,11 @@ const GET_PHOTOS = gql`
   }
 `;
 
-export const ListOfPhotos = () => {
-  const { loading, error, data = {} } = useQuery(GET_PHOTOS);
+export const ListOfPhotos = ({ categoryId }) => {
+  const { loading, error, data = {} } = useQuery(GET_PHOTOS, 
+    {
+      variables: { categoryId }
+    });
   
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
