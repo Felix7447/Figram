@@ -6,8 +6,10 @@ import { ErrorPage } from '../pages/ErrorPage'
 import { Favs } from "../pages/Favs";
 import { Account } from "../pages/Account";
 import { NotRegisteredUser } from "../pages/NotRegisteredUser";
+import { LoginPage } from "../pages/LoginPage";
+import { SignupPage } from "../pages/SingUpPage";
 
-const isLogged = true;
+const isLogged = false;
 
 export const router = createBrowserRouter(
 createRoutesFromElements([
@@ -36,7 +38,12 @@ createRoutesFromElements([
   />,
   <Route 
     path='/account' 
-    element={isLogged ? <Account/> : <NotRegisteredUser/>} 
+    element={isLogged ? <Account/> : <LoginPage/>} 
+    errorElement={<ErrorPage />}
+  />,
+  <Route 
+    path='/singup' 
+    element={<SignupPage />} 
     errorElement={<ErrorPage />}
   />
 ]));
