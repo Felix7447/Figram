@@ -16,9 +16,27 @@ export const NavigationBar = styled.nav`
 export const Anchor = styled(Link)`
   color: inherit;
   width: 100%;
+  height: 100%;
+  position: relative;
 
   :hover {
     color: inherit;
+  }
+
+  &[aria-current] {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 4px;
+      height: 4px;
+      background-color: rgba(27, 27, 27, 0.87);
+      bottom: 0;
+      top: 70%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
   }
 `;
 
