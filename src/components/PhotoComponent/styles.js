@@ -30,8 +30,3 @@ export const Img = styled.img`
   height: 100%;
   object-fit: cover;
 `;
-
-export const Span = styled.span`
-  margin-left: 0.8em;
-  font-weight: bold;
-`;
