@@ -1,5 +1,5 @@
+import React, { useContext } from "react";
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
-
 import { Home, Loader as HomeLoader } from '../pages/Home'
 import { Detail } from '../pages/Detail'
 import { ErrorPage } from '../pages/ErrorPage'
@@ -8,8 +8,8 @@ import { Account } from "../pages/Account";
 import { NotRegisteredUser } from "../pages/NotRegisteredUser";
 import { LoginPage } from "../pages/LoginPage";
 import { SignupPage } from "../pages/SingUpPage";
-
-const isLogged = false;
+import { Context } from "../context/context";
+import { RequireAuth } from "../container/RequireAuth";
 
 export const router = createBrowserRouter(
 createRoutesFromElements([
@@ -33,12 +33,29 @@ createRoutesFromElements([
   />,
   <Route 
     path='/favs' 
-    element={isLogged ? <Favs/> : <NotRegisteredUser/>} 
+    element={
+      <RequireAuth path="/NotRegisteredUser">
+        <Favs />
+      </RequireAuth>
+    } 
     errorElement={<ErrorPage />}
   />,
   <Route 
     path='/account' 
-    element={isLogged ? <Account/> : <LoginPage/>} 
+    element={
+      <RequireAuth path="/login">
+        <Account />
+      </RequireAuth>} 
+    errorElement={<ErrorPage />}
+  />,
+  <Route 
+    path='/NotRegisteredUser' 
+    element={<NotRegisteredUser />} 
+    errorElement={<ErrorPage />}
+  />,
+  <Route 
+    path='/login' 
+    element={<LoginPage />} 
     errorElement={<ErrorPage />}
   />,
   <Route 

@@ -12,6 +12,7 @@ const rotate = keyframes`
 
 export const Figure = styled.figure`
   min-height: 300px;
+  height: ${(props) => props.height};
   width: 100%;
   display: flex;
   justify-content: center;

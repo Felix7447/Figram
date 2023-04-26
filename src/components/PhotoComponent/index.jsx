@@ -8,7 +8,7 @@ import { useNearScreen } from '../../hooks/useNearScreen'
 
 const DEFAULT_IMAGE = "https://res.cloudinary.com/midudev/image/upload/w_300/q_80/v1560262103/dogs.png"
 
-export const Photo = ({ id, src = DEFAULT_IMAGE, likes = 0, categoryId, userId }) => {
+export const PhotoComponent = ({ id, src = DEFAULT_IMAGE, likes = 0, categoryId, userId, handleLike }) => {
   const { show, element } = useNearScreen();
   const [location, setLocation] = useState(""); 
 
@@ -33,7 +33,7 @@ export const Photo = ({ id, src = DEFAULT_IMAGE, likes = 0, categoryId, userId }
          <Img src={src} alt={`photo-${id}`} />
           : <Loading />}
       </Anchor>
-      <PhotoIcons/>
+      <PhotoIcons id={id} handleLike={handleLike} />
       <Span>{likes} likes</Span>
       {userId && <PhotoDescription userId={userId} categoryId={categoryId} />}
     </Post>

@@ -2,10 +2,10 @@ import React from 'react'
 import { MdOutlineMotionPhotosOn } from "react-icons/md"
 import { Figure } from './styles'
 
-export const Loading = () => {
+export const Loading = ({size = '32px', height}) => {
   return (
-    <Figure>
-        <MdOutlineMotionPhotosOn size={'32px'} />
+    <Figure height={height}>
+        <MdOutlineMotionPhotosOn size={size} />
     </Figure>
   )
 }

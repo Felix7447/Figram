@@ -1,6 +1,6 @@
 import React from 'react'
 import { gql, useQuery } from '@apollo/client'
-import { Photo } from '../components/Photo'
+import { PhotoComponent } from '../components/PhotoComponent'
 import { Loading } from '../components/Loading'
 
 const GET_SINGLE_PHOTO = gql`
@@ -23,10 +23,10 @@ export const PhotoWithQuery = () => {
       variables: { photoId: id }
     })
 
-  if (loading) return <Loading/>
+  if (loading) return <Loading />
   if (error) return "Error"
 
   const { photo } = data;
   console.log(photo);
-  return <Photo {...photo} />
+  return <PhotoComponent {...photo} />
 }
