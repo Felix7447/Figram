@@ -1,11 +1,11 @@
 import React from "react";
 import { gql, useMutation } from "@apollo/client";
-import { PhotoComponent } from "../components/PhotoComponent";
+import { PhotoIcons } from "../components/PhotoIcons"
 import { Loading } from "../components/Loading";
 import { ErrorMessage } from "../components/ErrorMessage";
 
 const LIKE_PHOTO = gql`
-  mutation likePhoto($photo: ID!) {
+  mutation likePhoto($photo: LikePhoto!) {
     likePhoto(input: $photo) {
       id
       likes
@@ -14,17 +14,14 @@ const LIKE_PHOTO = gql`
   }
 `
 
-export const Photo = ({ photoData }) => {
+export const LikeMutation = ({ id, likes, liked }) => {
   const [ like, { data, loading, error } ] = useMutation(LIKE_PHOTO)
 
-  if (loading) return <Loading size='48px' height='60vh'/>
-  if (error) return <ErrorMessage title={error.name} height='60vh'>{error.message}</ErrorMessage>
-
-  const handleLike = (photo) => {
+  const handleLike = (photo) => (
     like({
       variables: { photo }
-    }).then(data => console.log(data))
-  }
+    })
+  )
 
-  return <PhotoComponent handleLike={handleLike} {...photoData} />
+  return <PhotoIcons id={id} likes={likes} liked={liked} handleLike={handleLike} />
 }

@@ -10,6 +10,7 @@ const GET_PHOTOS = gql`
       src
       userId
       likes
+      liked
     }
   }
 `;

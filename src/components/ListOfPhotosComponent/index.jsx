@@ -1,5 +1,5 @@
 import React from 'react'
-import { Photo } from '../../container/LikeMutation'
+import { PhotoComponent } from '../PhotoComponent';
 import { ListOfPhotos } from './styles';
 
 export const ListOfPhotosComponent = ({ data }) => {
@@ -8,7 +8,7 @@ export const ListOfPhotosComponent = ({ data }) => {
     <ListOfPhotos>
       {
         data.map(element => (
-          <Photo key={`photo-${element.id}`} {...element}/>
+          <PhotoComponent key={`photo-${element.id}`} {...element}/>
         ))
       }
     </ListOfPhotos>
