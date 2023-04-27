@@ -27,6 +27,6 @@ export const PhotoWithQuery = () => {
   if (error) return "Error"
 
   const { photo } = data;
-  console.log(photo);
+  
   return <PhotoComponent {...photo} />
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Post, Anchor, Img, Span } from './styles'
+import { Post, Anchor, Img } from './styles'
 import { User } from '../User'
 import { LikeMutation } from '../../container/LikeMutation'
 import { PhotoDescription } from '../PhotoDescription'

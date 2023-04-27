@@ -1,12 +1,17 @@
 import React from 'react'
 import { Layout } from '../../components/Layout'
-import { ErrorMessage } from '../../components/ErrorMessage'
+import { UserProfile } from '../../components/UserProfile'
+import { FavsWithOverlay } from '../../components/FavsWithOverlay'
+import { LogoutButton } from '../../components/LogoutButton'
+
 
 export const Account = () => {
+  
   return (
     <Layout>
-        <h1>Account</h1>
-        {/* <ErrorMessage title='48px'/> */}
+        <UserProfile />
+        <FavsWithOverlay />
+        <LogoutButton/>
     </Layout>
   )
 }

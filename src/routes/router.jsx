@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { Home, Loader as HomeLoader } from '../pages/Home'
 import { Detail } from '../pages/Detail'
@@ -8,7 +8,6 @@ import { Account } from "../pages/Account";
 import { NotRegisteredUser } from "../pages/NotRegisteredUser";
 import { LoginPage } from "../pages/LoginPage";
 import { SignupPage } from "../pages/SingUpPage";
-import { Context } from "../context/context";
 import { RequireAuth } from "../container/RequireAuth";
 
 export const router = createBrowserRouter(

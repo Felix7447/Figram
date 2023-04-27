@@ -1,17 +1,21 @@
 import React from 'react'
 import { Fav } from '../Fav';
+import { Favs, Grid } from './styles';
+import { NoFavs } from '../NoFavs';
 
 export const ListOfFavs = ({ favs = [] }) => {
   console.log(favs);
   return (
-    <div>
+    <Favs>
       {
         favs.length > 0 ? 
-          favs.map(fav => 
-            <Fav {...fav}/>
-          ) 
-          : <h2>No favs</h2>
+          <Grid>
+            {favs.map(fav => 
+              <Fav key={`fav-${fav.id}`} {...fav}/>
+            ) }
+          </Grid>
+          : <NoFavs />
       }
-    </div>
+    </Favs>
   )
 }

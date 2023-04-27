@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-import { Container, Input, Button } from './styles'
+import { Container, Input } from './styles'
+import { Button } from '../Button'
 
 export const LoginFormComponent = ({ children, submit }) => {
   const email = useRef(null)
