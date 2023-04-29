@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Post, Anchor, Img } from './styles'
-import { User } from '../User'
+import { UserPhoto } from '../UserPhoto'
 import { LikeMutation } from '../../container/LikeMutation'
 import { PhotoDescription } from '../PhotoDescription'
 import { Loading } from '../Loading'
@@ -27,7 +27,7 @@ export const PhotoComponent = ({ id, src = DEFAULT_IMAGE, likes = 0, liked, cate
 
   return (
     <Post>
-      <User userId={userId} size={'22px'}/>
+      <UserPhoto userId={userId} size={'22px'}/>
       <Anchor ref={element} to={location}>
         {show ?
          <Img src={src} alt={`photo-${id}`} />

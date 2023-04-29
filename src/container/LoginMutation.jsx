@@ -15,7 +15,7 @@ export const LoginMutation = ({ children }) => {
   const { handleSubmit, loading, error } = useSignMutation(LOGIN_MUTATION)
 
   if (loading) return <Loading size='48px' height='60vh'/>
-  if (error) return <ErrorMessage title={error.name} height='60vh'>{error.message}</ErrorMessage>
+  if (error) return <ErrorMessage title={error.name} height='60vh' path="/login">{error.message}</ErrorMessage>
 
   return <LoginFormComponent submit={handleSubmit}>{children}</LoginFormComponent>
 }

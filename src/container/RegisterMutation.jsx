@@ -15,7 +15,7 @@ export const RegisterMutation = ({ children }) => {
   const { handleSubmit, loading, error } = useSignMutation(SIGNUP_MUTATION)
 
   if (loading) return <Loading size='48px' height='60vh'/>
-  if (error) return <ErrorMessage title={error.name} height='60vh'>{error.message}</ErrorMessage>
+  if (error) return <ErrorMessage title={error.name} height='60vh' path='/signup'>{error.message}</ErrorMessage>
 
   return <SingupFormComponent submit={handleSubmit}>{children}</SingupFormComponent>
 }

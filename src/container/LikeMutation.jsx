@@ -13,7 +13,11 @@ const LIKE_PHOTO = gql`
 `
 
 export const LikeMutation = (props) => {
-  const [ like, _ ] = useMutation(LIKE_PHOTO)
+  const [ like, { _data, _loading, error} ] = useMutation(LIKE_PHOTO)
+
+  if (error) {
+    alert(error.message)
+  } 
 
   const handleLike = (photo) => (
     like({

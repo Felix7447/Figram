@@ -58,7 +58,7 @@ createRoutesFromElements([
     errorElement={<ErrorPage />}
   />,
   <Route 
-    path='/singup' 
+    path='/signup' 
     element={<SignupPage />} 
     errorElement={<ErrorPage />}
   />

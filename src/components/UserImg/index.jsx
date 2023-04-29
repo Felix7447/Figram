@@ -3,7 +3,7 @@ import { MdAccountCircle } from "react-icons/md"
 import { Div } from './styles'
 
 
-export const UserAccount = () => {
+export const UserImg = () => {
   return (
     <Div>
         <MdAccountCircle size={'48px'}/>

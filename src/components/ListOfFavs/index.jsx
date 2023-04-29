@@ -4,7 +4,6 @@ import { Favs, Grid } from './styles';
 import { NoFavs } from '../NoFavs';
 
 export const ListOfFavs = ({ favs = [] }) => {
-  console.log(favs);
   return (
     <Favs>
       {

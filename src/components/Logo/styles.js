@@ -4,6 +4,7 @@ export const Div = styled.div`
   background-color: #f0f0f0;
   border-bottom: 1px black solid;
   position: sticky;
+  z-index: 100;
   top: 0;
   height: 60px;
 `;

@@ -1,13 +1,16 @@
 import React, { useRef } from 'react'
 import { Container, Input } from './styles'
 import { Button } from '../Button'
+import { useFormValidation } from '../../hooks/useFormValidation'
 
 export const LoginFormComponent = ({ children, submit }) => {
+  const { loginValidation } = useFormValidation()
   const email = useRef(null)
   const password = useRef(null)
   
   const handleSubmit = (event) => {
     event.preventDefault()
+    loginValidation(email,password)
     let credentials = {
       email: email.current.value,
       password: password.current.value

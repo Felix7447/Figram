@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavigationBar = styled.nav`
+  max-width: 480px;
   width: 100%;
   height: 4em;
   background-color: #f0f0f0;
@@ -14,7 +15,7 @@ export const NavigationBar = styled.nav`
 `;
 
 export const Anchor = styled(Link)`
-  color: inherit;
+  color: rgba(27, 27, 27, 0.6);
   width: 100%;
   height: 100%;
   position: relative;
@@ -24,6 +25,7 @@ export const Anchor = styled(Link)`
   }
 
   &[aria-current] {
+    color: inherit;
     &::after {
       position: absolute;
       content: "";
