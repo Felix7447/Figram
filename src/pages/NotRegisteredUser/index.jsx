@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export const NotRegisteredUser = () => {
   return (
-    <Layout>
+    <Layout title='Not Registered User'>
       <WarningMessage 
         title="Ups! You are not a registered user"
       >

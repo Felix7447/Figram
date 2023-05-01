@@ -8,7 +8,7 @@ import { LogoutButton } from '../../components/LogoutButton'
 export const Account = () => {
   
   return (
-    <Layout>
+    <Layout title='Account' content='Figram User Account'>
         <UserProfile />
         <FavsWithOverlay />
         <LogoutButton/>

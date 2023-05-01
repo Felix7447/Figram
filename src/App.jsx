@@ -5,7 +5,6 @@ import { router } from './routes/router';
 import { Context } from './context/context';
 
 function App() {
-  const { isAuth } = useContext(Context)
   return (
     <div className="App">
       <RouterProvider router={router} />

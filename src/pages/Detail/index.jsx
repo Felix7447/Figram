@@ -4,7 +4,7 @@ import { PhotoWithQuery } from '../../container/withSinglePhoto'
 
 export const Detail = () => {
   return (
-    <Layout>
+    <Layout title='Photos'>
         <PhotoWithQuery />
     </Layout>
   )

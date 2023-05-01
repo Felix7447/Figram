@@ -5,7 +5,7 @@ import { Title } from "../../components/Title"
 
 export const Favs = () => {
   return (
-    <Layout>
+    <Layout title='Favorites' content='Your favorite figram photos'>
         <Title align={'center'} marginTop={'0.3em'}>Favs</Title>
         <WithFavs />
     </Layout>

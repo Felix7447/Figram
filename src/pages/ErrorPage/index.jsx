@@ -7,7 +7,7 @@ export const ErrorPage = () => {
   console.error(error);
 
   return (
-    <Layout>
+    <Layout title='Error' content='Error Page'>
       <Div id="error-page">
         <h1>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>
