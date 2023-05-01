@@ -3,7 +3,6 @@ import { PhotoComponent } from '../PhotoComponent';
 import { ListOfPhotos } from './styles';
 
 export const ListOfPhotosComponent = ({ data }) => {
-  console.log(data);
   return (
     <ListOfPhotos>
       {
