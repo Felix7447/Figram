@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Container, Input, Button } from './styles'
 import { useFormValidation } from '../../hooks/useFormValidation'
 
-export const SingupFormComponent = ({ children, submit }) => {
+export const SignupFormComponent = ({ children, submit }) => {
   const { signUpValidation } = useFormValidation()
   const user = useRef(null)
   const email = useRef(null)
@@ -20,7 +20,7 @@ export const SingupFormComponent = ({ children, submit }) => {
   }
 
   return (
-    <Container onSubmit={handleSubmit}>
+    <Container method='POST' onSubmit={handleSubmit}>
       <label htmlFor="user">Username</label>
       <Input ref={user} id='user' type="text" />
       <label htmlFor="email">Email</label>

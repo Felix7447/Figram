@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 
 const GET_FAVS = gql`
@@ -51,7 +50,9 @@ const getFavCategory = (array) => {
 };
 
 export const useGetFavs = () => {
-  const { data, loading, error } = useQuery(GET_FAVS);
+  const { data, loading, error } = useQuery(GET_FAVS, {
+    fetchPolicy: "network-only",
+  });
   const favs = data?.favs;
 
   const favCategory = () => {

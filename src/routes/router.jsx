@@ -7,7 +7,7 @@ import { Favs } from "../pages/Favs";
 import { Account } from "../pages/Account";
 import { NotRegisteredUser } from "../pages/NotRegisteredUser";
 import { LoginPage } from "../pages/LoginPage";
-import { SignupPage } from "../pages/SingUpPage";
+import { SignupPage } from "../pages/SignUpPage";
 import { RequireAuth } from "../container/RequireAuth";
 
 export const router = createBrowserRouter(

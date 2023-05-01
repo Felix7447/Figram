@@ -19,7 +19,7 @@ export const LoginFormComponent = ({ children, submit }) => {
   }
 
   return (
-    <Container onSubmit={handleSubmit}>
+    <Container method='POST' onSubmit={handleSubmit}>
       <label htmlFor="email">Email</label>
       <Input id='email' ref={email} type="email" placeholder='example@mail.com' />
       <label htmlFor="password">Password</label>

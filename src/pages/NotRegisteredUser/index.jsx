@@ -10,7 +10,7 @@ export const NotRegisteredUser = () => {
         title="Ups! You are not a registered user"
       >
         <p>Please go to the <Link to='/account'> <i>Login Page</i> </Link> to see this content</p>
-        <p>Don't have an account? Please<Link to='/singup'> <i>Sign Up!</i> </Link></p>
+        <p>Don't have an account? Please<Link to='/signup'> <i>Sign Up!</i> </Link></p>
       </WarningMessage>
     </Layout>
   )
