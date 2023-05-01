@@ -4,7 +4,7 @@ import { Story } from "../Story"
 import { Nav } from './styles';
 import { endpoints } from '../../config/config'
 
-export const ListOfStories = () => {
+const ListOfStoriesComponent = () => {
   const { data = [] } = useGetData(endpoints.categories);
   return (
     <Nav>
@@ -18,3 +18,5 @@ export const ListOfStories = () => {
     </Nav>
   )
 }
+
+export const ListOfStories = React.memo(ListOfStoriesComponent)

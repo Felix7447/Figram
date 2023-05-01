@@ -3,7 +3,7 @@ import { Anchor } from './styles'
 
 const DEFAULT_IMAGE = 'https://res.cloudinary.com/midudev/image/upload/w_150/v1555671700/category_cats.jpg'
 
-export const Story = ({ name = 'Loading...', cover = DEFAULT_IMAGE, path = '/' }) => {
+ const StoryComponent = ({ name = 'Loading...', cover = DEFAULT_IMAGE, path = '/' }) => {
   return (
       <Anchor to={path}>
         <img src={cover} alt={name} />
@@ -11,3 +11,5 @@ export const Story = ({ name = 'Loading...', cover = DEFAULT_IMAGE, path = '/' }
       </Anchor>
   )
 }
+
+export const Story = React.memo(StoryComponent)
